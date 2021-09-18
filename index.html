@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <link rel="stylesheet" href="/main.css"/>
+</head>
+<body>
+<!---Modal - Open - Button--->
+<button id="modalButton">Open Modal</button>
+
+<!---Modal--->
+<div id="modal" class="modal-back">
+<div class="modal-content"> 
+</div>
+</div>
+
+ </body>
+
+ <!---Modal - Show - Hide--->
+ <script>
+    let modalButton =  document.getElementById('modalButton');
+    modalButton.onmousedown = () => {showModal("modal")}; 
+
+    let modal = document.getElementById("modal");
+    window.onmousedown = function(event) 
+   {
+       if (event.target == modal) 
+       {
+        modal.style.display = "none";
+       }
+     }
+
+
+// Show Modal
+ showModal = (modalId) =>
+ {
+     let modal = document.getElementById(modalId);
+     modal.style.display = "block";
+ }
+</script>
+</html>
