@@ -83,7 +83,7 @@
     document.getElementById('modalButton').onmousedown = () => {showModal("modal")}; // On Pressing the modal - button open/show the modal 
     
     // Modal - Hide/Close
-    document.getElementById("modal").onmousedown = (e)=> {if(e.target === e.currentTarget) document.body.style.cssText ="overflow: auto;", e.currentTarget.style.cssText="display: none; user-select: none;"}; // On Mouse down if the background is clicked and not the content than hide
+    document.getElementById("modal").onmousedown = (e)=> {if(e.target === e.currentTarget) document.body.style.cssText ="overflow: auto;", e.currentTarget.style.display = "none";}; // On Mouse down if the background is clicked and not the content than hide
 
      
 // Modal - Show/Open - Func
@@ -91,7 +91,7 @@
  {
     document.body.style.cssText ="overflow: hidden;"; // Disable scroll in body when modal is opened
    let modal = document.getElementById(modalId);
-   modal.style.cssText = "display: block; user-select: auto;";
+   modal.style.cssText = "display: block;";
  }
 </script>
 </html>
