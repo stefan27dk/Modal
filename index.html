@@ -12,9 +12,9 @@
 <button id="modalButton">Open Modal</button>
 
 <!---Modal--->
-<div id="modal" class="modal-back">
+<div  tabindex="1" id="modal" class="modal-back">
 <div  class="modal-content"> 
-<iframe  class="modal-iframe noselect" src="/firstModal.html"></iframe>
+<iframe class="modal-iframe noselect" src="/firstModal.html"></iframe>
 </div>
 </div>
 
@@ -80,7 +80,7 @@
  <!---Modal - Show - Hide--->
  <script>
      // Event Listeners
-    document.getElementById('modalButton').onmousedown = () => {showModal("modal")}; // On Pressing the modal - button open/show the modal 
+    document.getElementById('modalButton').onclick = () => {showModal("modal")}; // On Pressing the modal - button open/show the modal 
     
     // Modal - Hide/Close
     document.getElementById("modal").onmousedown = (e)=> {if(e.target === e.currentTarget) document.body.style.cssText ="overflow: auto;", e.currentTarget.style.display = "none";}; // On Mouse down if the background is clicked and not the content than hide
@@ -89,9 +89,10 @@
 // Modal - Show/Open - Func
  showModal = (modalId) =>
  {
-    document.body.style.cssText ="overflow: hidden;"; // Disable scroll in body when modal is opened
+   document.body.style.cssText ="overflow: hidden;"; // Disable scroll in body when modal is opened
    let modal = document.getElementById(modalId);
-   modal.style.cssText = "display: block;";
+   modal.style.display = "block";
+   modal.getElementsByTagName('iframe')[0].focus();
  }
 </script>
 </html>
