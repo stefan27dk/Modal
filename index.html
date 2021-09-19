@@ -10,13 +10,21 @@
 <body>
 <!---Modal - Open - Button--->
 <button id="modalButton">Open Modal</button>
+<button id="modalButton2">Open Modal2</button>
 
 <!---Modal--->
-<div  tabindex="1" id="modal" class="modal-back">
-<div  class="modal-content"> 
+<div id="modal" class="modal-back">
+<div class="modal-content"> 
 <iframe class="modal-iframe noselect" src="/firstModal.html"></iframe>
 </div>
 </div>
+
+<!---Modal- 2-->
+<div id="modal2" class="modal-back">
+  <div class="modal-content"> 
+  <iframe class="modal-iframe noselect" src="/secondModal.html"></iframe>
+  </div>
+  </div>
 
 <br/>TOP
 <br/>
@@ -78,9 +86,11 @@
  <script>
      // Event Listeners
     document.getElementById('modalButton').onclick = () => {showModal("modal")}; // On Pressing the modal - button open/show the modal 
+    document.getElementById('modalButton2').onclick = () => {showModal("modal2")}; // On Pressing the modal - button open/show the modal 
     
     // Modal - Hide/Close
     document.getElementById("modal").onmousedown = (e)=> {if(e.target === e.currentTarget) document.body.style.cssText ="overflow: auto;", e.currentTarget.style.display = "none";}; // On Mouse down if the background is clicked and not the content than hide
+    document.getElementById("modal2").onmousedown = (e)=> {if(e.target === e.currentTarget) document.body.style.cssText ="overflow: auto;", e.currentTarget.style.display = "none";}; // On Mouse down if the background is clicked and not the content than hide
 
      
 // Modal - Show/Open - Func
