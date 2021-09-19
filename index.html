@@ -13,10 +13,51 @@
 
 <!---Modal--->
 <div id="modal" class="modal-back">
-<div class="modal-content"> AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+<div class="modal-content"> sssssssAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 </div>
 </div>
-
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>sss
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>ss
  </body>
 
 
@@ -26,13 +67,15 @@
      // Event Listeners
     document.getElementById('modalButton').onmousedown = () => {showModal("modal")}; 
 
-    document.getElementById("modal").onmousedown = (e)=> {if(e.target === e.currentTarget)e.currentTarget.style.display = "none";};
+    document.getElementById("modal").onmousedown = (e)=> {if(e.target === e.currentTarget) document.body.style.cssText ="overflow: auto;", e.currentTarget.style.display = "none";};
 
      
 // Show Modal
  showModal = (modalId) =>
  {
-    document.getElementById(modalId).style.display = "block";
+    document.body.style.cssText ="overflow: auto;";
+   let modal = document.getElementById(modalId);
+   modal.style.cssText = "display: block;";
  }
 </script>
 </html>
